@@ -1,0 +1,10 @@
+[
+    {
+        "id": 511,
+        "image_src": "https://static-task-assets.react-formula.com/peace_lily_sky.jpeg",
+        "plant_name": "Peace Lily",
+        "pot_color": "sky",
+        "price_per_unit": 67,
+        "quantity": 1
+    }
+]
