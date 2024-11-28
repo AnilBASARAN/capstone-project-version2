@@ -17,6 +17,10 @@ const plantSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    id: {
+      type: String,
+      required: true,
+    },
     images: {
       type: [imageSchema], // Embedding the image schema as an array
       required: true,

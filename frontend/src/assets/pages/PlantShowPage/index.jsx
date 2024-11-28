@@ -1,28 +1,30 @@
-import { useEffect,useState } from "react";
+import { useEffect } from "react";
 import NavBar from "shared-components/NavBar";
-import * as plantService from "services/plant";
+
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "shared-components/LoadingSpinner";
 import PlantInfoSection from "./PlantInfoSection";
 import { useThemeStore } from "store/useThemeStore";
+import { usePlantStore } from "store/usePlantStore";
 
 const PlantShowPage=()=>{
     const { theme } = useThemeStore();
-    const [plants,setPlants] = useState(null);
+
     const {plantId} = useParams();
-    const [isLoading,setIsLoading] =useState(true);
+   
 
    
-    useEffect(()=>{
-        (async()=>{
-        
-        const response = await plantService.getPlantById({id:plantId});
-        const data =  await response.json();
-        setPlants(data);
-        setIsLoading(false);
+    const { plants,getPlantById,isLoading} = usePlantStore();
 
-        })()
-    },[plantId])
+
+    useEffect(() => {
+      
+      getPlantById(plantId)
+      
+    }, [plantId,getPlantById]);
+  
+    console.log("plantId:",plantId)
+    console.log("plant:",plants)
 
     return(
        <>

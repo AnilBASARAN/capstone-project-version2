@@ -10,20 +10,22 @@ import { usePlantStore } from "store/usePlantStore";
 
 
 const PlantListPage =()=> {
-  const { theme } = useThemeStore();
+    const { theme } = useThemeStore();
     const footerRef = useRef(null);
     const navRef = useRef(null);
-
-    const { plants,getPlants } = usePlantStore();
+   
+    const { plants,getPlants,isLoading} = usePlantStore();
 
 
     useEffect(() => {
+      
       getPlants();
+      
     }, [getPlants]);
   
     
-    const [,setPlants] = useState([]);
-    const [isLoading,setIsLoading] = useState(false);
+    
+ 
 
     console.log("plants:",plants)
 
@@ -62,24 +64,6 @@ const PlantListPage =()=> {
         </motion.div>
 
     ));
-  
-
-
-
-
-    useEffect(()=>{
-       ( async()=>{
-        setIsLoading(true);
-        const response = await plantService.getPlants();
-        const data = await response.json();
-        setPlants(data);
-        setIsLoading(false);
-        
-    })()
-        plantService.getPlants()
-
-
-    },[])
     
 
     return (
