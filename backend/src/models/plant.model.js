@@ -18,7 +18,7 @@ const plantSchema = new mongoose.Schema(
       required: true,
     },
     id: {
-      type: String,
+      type: Number,
       required: true,
     },
     images: {
@@ -36,7 +36,7 @@ const plantSchema = new mongoose.Schema(
     description: {
       type: String,
       required: false, // Optional if not present in the object
-    },
+    }
   },
   { timestamps: true }
 );

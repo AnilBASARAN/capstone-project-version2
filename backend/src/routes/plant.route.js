@@ -4,6 +4,5 @@ import {protectRoute} from "../middleware/auth.middleware.js"
 const router = express.Router();
 
 router.get("/",getAllPlants)
-router.get("/:id",getPlantById)
-
+router.get('/:plantId', getPlantById); // Fetch a specific plant by its 'id'
 export default router;
