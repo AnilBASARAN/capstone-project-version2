@@ -7,8 +7,8 @@ import { THEMES } from "constants";
 import NavBar from "shared-components/NavBar";
 
 const PREVIEW_MESSAGES = [
-  { id: 1, content: "Hey! How's it going?", isSent: false },
-  { id: 2, content: "I'm doing great! Just working on some new features.", isSent: true },
+  { id: 1, content: "Hey! I just want to ask what seperates your services and what are the some benefits we get purchising from you?", isSent: false },
+  { id: 2, content: "Guaranteed Healthy Guaranteed , ShippingGuaranteed to ship in 3 days or your money back , feel free to ask any questions", isSent: true },
 ];
 
 const SettingsPage = () => {
@@ -63,7 +63,7 @@ const SettingsPage = () => {
                       J
                     </div>
                     <div>
-                      <h3 className="font-medium text-sm">John Doe</h3>
+                      <h3 className="font-medium text-sm">Sales Representative</h3>
                       <p className="text-xs text-base-content/70">Online</p>
                     </div>
                   </div>
