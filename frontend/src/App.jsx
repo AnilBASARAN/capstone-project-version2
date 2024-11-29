@@ -10,6 +10,8 @@ import PlantShowPage from "assets/pages/PlantShowPage";
 import ScrollToTop from "shared-components/ScrolltoTop";
 import { useThemeStore } from "store/useThemeStore";
 import SettingsPage from "assets/pages/SettingsPage";
+import CartPage from "assets/pages/CartPage";
+import OrdersPage from "assets/pages/OrdersPage";
 
 
 const  App = () => {
@@ -46,6 +48,7 @@ const  App = () => {
     <Route path="/signup" element={<SignUpPage /> } />
     <Route path="/settings" element={<SettingsPage /> } />
     <Route path="/plants" element={<PlantListPage /> } />
+    <Route path="/orders" element={<OrdersPage /> } />
     <Route path="/plants/:plantId" element={<PlantShowPage /> } />
 
    </Routes>

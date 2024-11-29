@@ -1,6 +1,5 @@
 import { useEffect,useState,useRef } from "react";
 import NavBar from "shared-components/NavBar";
-import * as plantService from "services/plant";
 import PlantItem from "./PlantItem";
 import LoadingSpinner from "shared-components/LoadingSpinner";
 import clsx from "clsx";

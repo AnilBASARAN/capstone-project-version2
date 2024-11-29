@@ -25,11 +25,18 @@ const PlantShowPage = () => {
             <NavBar />
             <div data-theme={theme} className="flex justify-center min-h-screen">
                 <div className="flex justify-center items-center w-full max-w-5xl md:w-full p-[175px] md:p-[50px]">
-                    {isPlantsLoading ? (
+                    {
+                    isPlantsLoading ? 
+                    (
                         <LoadingSpinner />
-                    ) : selectedPlant ? (
+                    ) 
+                    : 
+                    selectedPlant ? 
+                    (
                         <PlantInfoSection plant={selectedPlant} />
-                    ) : (
+                    ) 
+                    : 
+                    (
                         <div className="text-center text-gray-500">
                             <p>Plant not found or an error occurred.</p>
                         </div>

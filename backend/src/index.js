@@ -3,8 +3,10 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { connectDB } from "./lib/db.js";
+
 import authRoutes from "./routes/auth.route.js";
 import plantRoutes from "./routes/plant.route.js";
+import orderRoutes from "./routes/order.route.js";
 
 
 const app = express();
@@ -25,6 +27,7 @@ app.use(
 
 app.use("/api/auth", authRoutes);
 app.use("/api/plants", plantRoutes);
+app.use("/api/orders", orderRoutes);
 
 
 app.listen(PORT, () => {
