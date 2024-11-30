@@ -35,4 +35,3 @@ app.listen(PORT, () => {
   connectDB();
 });
 
-//password: 8F2V4NaHBX9UHHpA
