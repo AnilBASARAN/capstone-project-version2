@@ -4,7 +4,7 @@ import { Eye, EyeOff, Loader2, Lock, Mail } from "lucide-react";
 import { useAuthStore } from "store/useAuthStore";
 import { useState } from "react";
 
-
+// finally found the right one
 const SignInPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
