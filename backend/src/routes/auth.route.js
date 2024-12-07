@@ -3,7 +3,7 @@ import { signup ,login, logout,checkAuth} from "../controllers/auth.controller.j
 import {protectRoute} from "../middleware/auth.middleware.js"
 const router = express.Router();
 
-router.post("/signup",signup)
+router.post("/sign-up",signup)
 
 router.post("/login", login)
 

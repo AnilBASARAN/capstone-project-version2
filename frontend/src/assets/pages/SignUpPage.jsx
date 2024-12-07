@@ -38,6 +38,7 @@ const SignUpPage = () => {
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
       {/* left side */}
+      <img className="h-screen object-cover" src="https://img.freepik.com/free-photo/business-owner-holding-we-are-open-sign_53876-127038.jpg" />
       <div className="flex flex-col justify-center items-center p-6 sm:p-12">
         <div className="w-full max-w-md space-y-8">
           {/* LOGO */}

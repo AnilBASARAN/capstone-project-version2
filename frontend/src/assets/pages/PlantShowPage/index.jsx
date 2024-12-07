@@ -8,7 +8,7 @@ import { usePlantStore } from "store/usePlantStore";
 
 const PlantShowPage = () => {
     const { theme } = useThemeStore();
-    const { plantId } = useParams();
+    const { plantId,plantImage } = useParams();
     const { selectedPlant, getPlantById, isPlantsLoading } = usePlantStore();
 
     useEffect(() => {
@@ -33,7 +33,7 @@ const PlantShowPage = () => {
                     : 
                     selectedPlant ? 
                     (
-                        <PlantInfoSection plant={selectedPlant} />
+                        <PlantInfoSection selectedPlant={selectedPlant} plantImage={plantImage} />
                     ) 
                     : 
                     (

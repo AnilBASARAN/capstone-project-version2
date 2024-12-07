@@ -13,6 +13,7 @@ const SignInPage = () => {
   });
   const { login, isLoggingIn,authUser } = useAuthStore();
 
+  console.log("user:",authUser);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,11 +23,11 @@ const SignInPage = () => {
 
 
 console.log("user:",authUser)
-console.log("plants:",plants)
+
 
   return (
     <div className="h-screen grid lg:grid-cols-2">
-      {/* Left Side - Form */}
+      <img className="h-screen object-cover" src="https://img.freepik.com/free-photo/business-owner-holding-we-are-open-sign_53876-127038.jpg" />
       <div className="flex flex-col justify-center items-center p-6 sm:p-12">
         <div className="w-full max-w-md space-y-8">
           {/* Logo */}
@@ -107,7 +108,7 @@ console.log("plants:",plants)
           <div className="text-center">
             <p className="text-base-content/60">
               Don&apos;t have an account?{" "}
-              <Link to="/signup" className="link link-primary">
+              <Link to="/sign-up" className="link link-primary">
                 Create account
               </Link>
             </p>

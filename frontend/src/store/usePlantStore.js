@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 export const usePlantStore = create((set) => ({
   plants: [],
-  selectedPlant: null,
+  selectedPlantDetail: 0,
   isPlantsLoading: false,
 
   setPlants: (plants) => set({ plants }),
@@ -32,4 +32,7 @@ export const usePlantStore = create((set) => ({
           set({ isPlantsLoading: false });
       }
   }
+,
+  setSelectedPlant: (selectedPlant) => set({selectedPlant}),
+
 }));

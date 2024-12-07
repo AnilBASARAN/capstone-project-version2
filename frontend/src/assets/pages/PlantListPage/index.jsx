@@ -8,12 +8,16 @@ import { useThemeStore } from "store/useThemeStore";
 import { usePlantStore } from "store/usePlantStore";
 
 
+
+
 const PlantListPage =()=> {
     const { theme } = useThemeStore();
     const footerRef = useRef(null);
     const navRef = useRef(null);
    
     const { plants,getPlants,isLoading} = usePlantStore();
+
+
 
 
     useEffect(() => {

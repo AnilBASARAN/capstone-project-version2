@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 const POT_COLORS = {
     stone: "bg-stone-200",
     slate: "bg-slate-300",
@@ -20,10 +21,10 @@ const PlantItem =(props)=> {
     
     const[imageIndex,setImageIndex] = useState(()=> getRandomIndex(plant.images));
     const [active,setActive] = useState(imageIndex);
-
+    
     return(
         <div className="mx-5 my-8">
-            <Link to={`/plants/${plant.id}`} >
+            <Link to={`/plants/${plant.id}/${imageIndex}`} >
             
             <img className="w-[280px] h-[320px] rounded-md object-cover " src={plant.images[imageIndex].src} />
             </Link>
@@ -41,6 +42,7 @@ const PlantItem =(props)=> {
                                                 onMouseMove={()=>{
                                                     setImageIndex(index);
                                                     setActive(index);
+                                                    
                                                 }}
                                                 key={index} 
                                                 className={clsx("rounded-md  mx-[3px] ",POT_COLORS[image.pot_color] , index === active ? "outline w-[45px] h-[45px] outline-slate-300 outline-offset-2" : "w-[30px] h-[30px]" )} />)
